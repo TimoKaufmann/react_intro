@@ -1,6 +1,6 @@
 import React from "react";
 
-const quoteStyle = {
+  const quoteStyle = {
     fontStyle: 'italic',
     color: '#f89a03ff',
     fontSize: '1.5em',
@@ -16,14 +16,15 @@ const quoteStyle = {
     display: 'block'
   };
 
-function QuoteCard(props) {
+
+function QuoteCard({ quoteText, characterName, isQuoteEpic }) {
 
     return (
         <blockquote style={quoteStyle}>
-            "{props.quoteText}"
+            "{quoteText}"
             <footer style={characterStyle}>
-                - {props.characterName}
-                {props.isQuoteEpic && <span style={{ marginLeft: '10px' }}>🌟</span>}
+                - {characterName}
+                {isQuoteEpic && <span style={{ marginLeft: '10px' }}>🌟</span>}
             </footer>
         </blockquote>
     )
